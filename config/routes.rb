@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   patch '/change-password/:id' => 'users#changepw'
   get '/reminders' => 'reminders#index'
   resources :users, only: [:index, :show]
-  resources :reminders, only: [:index, :show, :destroy]
+  resources :family_users [:create]
 end
