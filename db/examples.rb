@@ -17,3 +17,5 @@
 #                password: 'abc123',
 #                password_confirmation: nil)
 # end
+
+Task.create([{user_id: '1', description: 'bills'}])

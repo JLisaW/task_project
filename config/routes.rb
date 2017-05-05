@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   post '/sign-in' => 'users#signin'
   delete '/sign-out/:id' => 'users#signout'
   patch '/change-password/:id' => 'users#changepw'
-  get '/reminders' => 'reminders#index'
+  get '/tasks' => 'tasks#index'
+  post '/tasks/:id' => 'tasks#create'
+  patch '/tasks-update/:id' => 'tasks#update'
+  delete '/tasks-delete/:id' => 'tasks#delete'
   resources :users, only: [:index, :show]
-  resources :family_users [:create]
 end
