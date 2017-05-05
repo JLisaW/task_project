@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 class TaskSerializer < ActiveModel::Serializer
-  attributes :id, :description
+  attributes :id, :user_id, :description
 end
