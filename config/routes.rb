@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   patch '/tasks-update/:id' => 'tasks#update'
   delete '/tasks-delete/:id' => 'tasks#delete'
   resources :users, only: [:index, :show]
-  resources :tasks, only: [:new, :edit, :index, :show, :create, :destory, :update]
+  resources :tasks, only: [:index, :show, :create, :destory, :update]
 end
