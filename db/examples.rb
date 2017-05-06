@@ -18,4 +18,4 @@
 #                password_confirmation: nil)
 # end
 
-Task.create([user_id: 'user.id', description: 'bills'])
+Task.create([user_id: 'user.id', description: 'pay bills'])
