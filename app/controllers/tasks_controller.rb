@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:show, :update, :destroy]
-  before_action :validate_user, only: [:index, :create, :update, :set_task]
+  before_action :set_task, only: [:create, :show, :update, :destroy]
+  # before_action :validate_user, only: [:index, :create, :update, :set_task]
 
   # GET /tasks
   def index
@@ -46,14 +46,14 @@ class TasksController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
 
   def set_task
-  validate_user
-  @task = current_user.items.find(params[:id])
-  # @task = Task.find(params[:id])
+  # validate_user
+  # @task = current_user.items.find(params[:id])
+  @task = Task.find(params[:id])
   end
 
-  def validate_user
-  set_current_user
-  end
+  # def validate_user
+  # set_current_user
+  # end
 
   # Only allow a trusted parameter "white list" through.
   def task_params
