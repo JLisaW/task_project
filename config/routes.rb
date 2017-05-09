@@ -5,10 +5,6 @@ Rails.application.routes.draw do
   post '/sign-in' => 'users#signin'
   delete '/sign-out/:id' => 'users#signout'
   patch '/change-password/:id' => 'users#changepw'
-  get '/tasks' => 'tasks#index'
-  post '/tasks/:id' => 'tasks#create'
-  patch '/tasks-update/:id' => 'tasks#update'
-  delete '/tasks-delete/:id' => 'tasks#delete'
   resources :users, only: [:index, :show]
-  resources :tasks, only: [:index, :show, :create, :destory, :update]
+  resources :tasks, only: [:index, :show, :create, :destroy, :update]
 end

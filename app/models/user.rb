@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 class User < ApplicationRecord
   include Authentication
-  has_many :tasks, class_name: 'Task'
+  has_many :tasks
 end
