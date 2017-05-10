@@ -30,7 +30,6 @@ class TasksController < ProtectedController
 
   # PATCH/PUT /tasks/1
   def update
-    binding.pry
     if @task.update(task_params)
       render json: @task
     else
