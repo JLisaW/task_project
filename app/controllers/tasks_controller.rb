@@ -22,7 +22,9 @@ class TasksController < ProtectedController
     @task = current_user.tasks.build(task_params)
 
     if @task.save
-      render json: @task, status: :created, location: @task
+      @tasks = current_user.tasks
+
+      render json: @tasks, status: :created, location: @task
     else
       render json: @task.errors, status: :unprocessable_entity
     end
@@ -49,6 +51,7 @@ class TasksController < ProtectedController
   def set_task
   # @task = current_user.items.find(params[:id])
   @task = Task.find(params[:id])
+  binding.pry
   end
 
   # Only allow a trusted parameter "white list" through.

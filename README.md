@@ -2,6 +2,8 @@ Lisa Wang - My Task List App
 
 BACKEND REPO: https://github.com/JLisaW/task_project
 BACKEND DEPLOYED: https://calm-basin-94254.herokuapp.com/
+FRONT END DEPLOYED: https://jlisaw.github.io/tasks_project_browser/
+FRONT END REPO: https://github.com/JLisaW/tasks_project_browser
 
 Explanation of project:
 
