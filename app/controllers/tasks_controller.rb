@@ -18,7 +18,6 @@ class TasksController < ProtectedController
   # POST /tasks
   def create
     # @task = Task.new(task_params)
-    # binding.pry
     @task = current_user.tasks.build(task_params)
 
     if @task.save
@@ -51,7 +50,6 @@ class TasksController < ProtectedController
   def set_task
   # @task = current_user.items.find(params[:id])
   @task = Task.find(params[:id])
-  binding.pry
   end
 
   # Only allow a trusted parameter "white list" through.
