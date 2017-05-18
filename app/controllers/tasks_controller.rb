@@ -1,11 +1,11 @@
 class TasksController < ProtectedController
   before_action :set_task, only: [:show, :update, :destroy]
-  # before_action :validate_user, only: [:index, :create, :update, :set_task]
+  before_action :validate_user
 
   # GET /tasks
   def index
     # @tasks = Task.all
-    @tasks = current_user.tasks
+    @tasks = current_user.tasks.all
 
     render json: @tasks
   end
@@ -48,8 +48,12 @@ class TasksController < ProtectedController
   # Use callbacks to share common setup or constraints between actions.
 
   def set_task
-  # @task = current_user.items.find(params[:id])
-  @task = Task.find(params[:id])
+  @task = current_user.tasks.find(params[:id])
+  # @task = Task.find(params[:id])
+  end
+
+  def validate_user
+    set_current_user
   end
 
   # Only allow a trusted parameter "white list" through.
