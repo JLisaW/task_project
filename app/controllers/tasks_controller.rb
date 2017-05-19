@@ -5,9 +5,10 @@ class TasksController < ProtectedController
   # GET /tasks
   def index
     # @tasks = Task.all
-    @tasks = current_user.tasks
-
+  if @tasks = current_user.tasks
     render json: @tasks
+  else
+    render json: @task.errors, status: :unprocessable_entity
   end
 
   # GET /tasks/1
