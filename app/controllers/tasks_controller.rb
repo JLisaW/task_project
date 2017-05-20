@@ -5,8 +5,7 @@ class TasksController < ProtectedController
   # GET /tasks
   def index
     # @tasks = Task.all
-    @tasks = current_user.tasks
-
+  @tasks = current_user.tasks
     render json: @tasks
   end
 
