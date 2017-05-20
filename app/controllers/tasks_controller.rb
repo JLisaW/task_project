@@ -5,10 +5,8 @@ class TasksController < ProtectedController
   # GET /tasks
   def index
     # @tasks = Task.all
-  if @tasks = current_user.tasks
+  @tasks = current_user.tasks
     render json: @tasks
-  else
-    render json: @task.errors, status: :unprocessable_entity
   end
 
   # GET /tasks/1
@@ -22,9 +20,7 @@ class TasksController < ProtectedController
     @task = current_user.tasks.build(task_params)
 
     if @task.save
-      @tasks = current_user.tasks
-
-      render json: @tasks, status: :created, location: @task
+      render json: @task, status: :created, location: @task
     else
       render json: @task.errors, status: :unprocessable_entity
     end
