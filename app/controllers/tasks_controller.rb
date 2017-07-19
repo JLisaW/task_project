@@ -1,6 +1,6 @@
 class TasksController < ProtectedController
   before_action :set_task, only: [:show, :update, :destroy]
-  # before_acti on :validate_user
+  # before_action :validate_user
 
   # GET /tasks
   def index

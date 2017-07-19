@@ -1,8 +1,11 @@
 Lisa Wang - My Task List App
 
 BACKEND REPO: https://github.com/JLisaW/task_project
+
 BACKEND DEPLOYED: https://calm-basin-94254.herokuapp.com/
+
 FRONT END DEPLOYED: https://jlisaw.github.io/tasks_project_browser/
+
 FRONT END REPO: https://github.com/JLisaW/tasks_project_browser
 
 Explanation of project:
@@ -11,13 +14,12 @@ The purpose of this application is to help individuals organize his/her tasks.  
 
 Process
 
-I started building the backend by using class notes and online resources.  I built my database and tested the CURL scripts
+I started creating this app by creating user stories to help me determine the user experience I wanted. I started by building the back-end to help me determine the kind of data I wanted to store in my database. Then I created a basic HTML/CSS for a visual of what I wanted the app to entail and test the functionalities I was going to create.
 
 
 Technologies Used
 
-* Ruby
-* Rails
+* Ruby on Rails
 
 User Stories
 
